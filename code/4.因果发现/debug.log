@@ -1,0 +1,191 @@
+============================================================
+  🌳 因果发现与推理 (LiNGAM + DoWhy)
+============================================================
+  时间: 2026-02-11 22:33:33
+  输出: /Users/liuziqian/science/农政齐民鱼菜共生/code/4.因果发现/output
+
+
+========================================
+📍 站点: 红光
+========================================
+📊 [红光] 加载数据: (21970, 13)
+   变量: ['Light_Hours', 'Light_Peak', 'Water_Temp', 'Water_Temp_Diff', 'DO', 'Ammonia', 'PH', 'EC', 'Air_Temp', 'Air_Temp_Diff', 'Humidity', 'Veg_Disease', 'Fish_Death']
+
+🧠 [红光] 正在学习因果结构 (DirectLiNGAM)...
+   ⚠️ 数据量较大 (21970), 抽样 1000 用于结构学习...
+   因果顺序: ['Veg_Disease', 'Humidity', 'Light_Peak', 'Air_Temp_Diff', 'Water_Temp_Diff', 'PH', 'DO', 'Ammonia', 'Fish_Death', 'Air_Temp', 'Light_Hours', 'Water_Temp', 'EC']
+   ⚠️ 未找到 'dot' 命令 (Graphviz)，跳过因果图绘制
+   🕸️ 发现的因果边 (阈值 > 0.01):
+      Air_Temp -> Light_Hours (w=0.4821)
+      Air_Temp_Diff -> Light_Hours (w=-0.0414)
+      Humidity -> Light_Hours (w=-0.0177)
+      Humidity -> Light_Peak (w=27.8402)
+      Veg_Disease -> Light_Peak (w=310.6485)
+      Light_Hours -> Water_Temp (w=0.2530)
+      Water_Temp_Diff -> Water_Temp (w=0.2125)
+      Air_Temp -> Water_Temp (w=0.3712)
+      Air_Temp_Diff -> Water_Temp (w=-0.2283)
+      Humidity -> Water_Temp (w=-0.0845)
+      Humidity -> Water_Temp_Diff (w=-0.0652)
+      Air_Temp_Diff -> DO (w=0.0423)
+      Humidity -> DO (w=0.0100)
+      PH -> Ammonia (w=-0.5154)
+      Water_Temp_Diff -> PH (w=-0.0213)
+      DO -> EC (w=-0.0211)
+      Water_Temp_Diff -> Air_Temp (w=-0.1035)
+      PH -> Air_Temp (w=1.1027)
+      Air_Temp_Diff -> Air_Temp (w=0.3288)
+      Humidity -> Air_Temp (w=0.1479)
+      Veg_Disease -> Air_Temp (w=-0.5564)
+      Fish_Death -> Air_Temp (w=0.0523)
+
+🧠 [红光] 构建专家因果图 (Physics-Guided)...
+
+🔎 [红光] 估计因果效应: Light_Hours -> Veg_Disease
+   🎯 因果效应 (ATE): -0.0857
+      ⚠️ 无法获取 p-value: unsupported format string passed to numpy.ndarray.__format__
+   🛡️ 安慰剂检验 p-value: 1.0000 (应该是无关的)
+   🛡️ 子集验证: 新ATE=-0.0857 (原=-0.0857)
+
+🔎 [红光] 估计因果效应: Water_Temp_Diff -> Fish_Death
+   🎯 因果效应 (ATE): 0.1168
+      ⚠️ 无法获取 p-value: unsupported format string passed to numpy.ndarray.__format__
+   🛡️ 安慰剂检验 p-value: 1.0000 (应该是无关的)
+   🛡️ 子集验证: 新ATE=0.1218 (原=0.1168)
+
+🔎 [红光] 估计因果效应: DO -> Fish_Death
+   🎯 因果效应 (ATE): 0.1030
+      ⚠️ 无法获取 p-value: unsupported format string passed to numpy.ndarray.__format__
+   🛡️ 安慰剂检验 p-value: 1.0000 (应该是无关的)
+   🛡️ 子集验证: 新ATE=0.1052 (原=0.1030)
+
+🔎 [红光] 估计因果效应: Ammonia -> Fish_Death
+   🎯 因果效应 (ATE): 0.3337
+      ⚠️ 无法获取 p-value: unsupported format string passed to numpy.ndarray.__format__
+   🛡️ 安慰剂检验 p-value: 1.0000 (应该是无关的)
+   🛡️ 子集验证: 新ATE=0.3333 (原=0.3337)
+
+🔎 [红光] 估计因果效应: EC -> Veg_Disease
+   🎯 因果效应 (ATE): -0.1851
+      ⚠️ 无法获取 p-value: unsupported format string passed to numpy.ndarray.__format__
+   🛡️ 安慰剂检验 p-value: 1.0000 (应该是无关的)
+   🛡️ 子集验证: 新ATE=-0.1853 (原=-0.1851)
+
+🔎 [红光] 估计因果效应: Humidity -> Veg_Disease
+   🎯 因果效应 (ATE): 0.0053
+      ⚠️ 无法获取 p-value: unsupported format string passed to numpy.ndarray.__format__
+   🛡️ 安慰剂检验 p-value: 1.0000 (应该是无关的)
+   🛡️ 子集验证: 新ATE=0.0053 (原=0.0053)
+
+
+========================================
+📍 站点: 喀左
+========================================
+📊 [喀左] 加载数据: (9900, 13)
+   变量: ['Light_Hours', 'Light_Peak', 'Water_Temp', 'Water_Temp_Diff', 'DO', 'Ammonia', 'PH', 'EC', 'Air_Temp', 'Air_Temp_Diff', 'Humidity', 'Veg_Disease', 'Fish_Death']
+
+🧠 [喀左] 正在学习因果结构 (DirectLiNGAM)...
+   ⚠️ 数据量较大 (9900), 抽样 1000 用于结构学习...
+   因果顺序: ['Fish_Death', 'Veg_Disease', 'Water_Temp_Diff', 'Air_Temp_Diff', 'Light_Peak', 'Light_Hours', 'Ammonia', 'EC', 'DO', 'Humidity', 'Air_Temp', 'PH', 'Water_Temp']
+   ⚠️ 未找到 'dot' 命令 (Graphviz)，跳过因果图绘制
+   🕸️ 发现的因果边 (阈值 > 0.01):
+      Water_Temp_Diff -> Light_Hours (w=0.0407)
+      Air_Temp_Diff -> Light_Hours (w=0.0817)
+      Veg_Disease -> Light_Hours (w=0.4531)
+      Fish_Death -> Light_Hours (w=0.0125)
+      Water_Temp_Diff -> Light_Peak (w=-763.0457)
+      Air_Temp_Diff -> Light_Peak (w=711.0053)
+      Light_Hours -> Water_Temp (w=0.2801)
+      DO -> Water_Temp (w=-0.3073)
+      Ammonia -> Water_Temp (w=-0.8163)
+      Air_Temp -> Water_Temp (w=0.5441)
+      Air_Temp_Diff -> Water_Temp (w=-0.1094)
+      Humidity -> Water_Temp (w=-0.0231)
+      Veg_Disease -> Water_Temp (w=-0.6673)
+      Water_Temp_Diff -> DO (w=-0.0710)
+      EC -> DO (w=-0.4736)
+      Air_Temp_Diff -> DO (w=0.0530)
+      Light_Hours -> Ammonia (w=0.0278)
+      Water_Temp_Diff -> Ammonia (w=-0.0219)
+      Light_Hours -> PH (w=0.0640)
+      Water_Temp_Diff -> PH (w=-0.0477)
+      DO -> PH (w=0.0514)
+      EC -> PH (w=-0.2915)
+      Light_Hours -> EC (w=-0.0673)
+      Water_Temp_Diff -> EC (w=0.0396)
+      Ammonia -> EC (w=-0.1544)
+      Veg_Disease -> EC (w=-0.1692)
+      Light_Hours -> Air_Temp (w=1.2544)
+      Water_Temp_Diff -> Air_Temp (w=0.1078)
+      DO -> Air_Temp (w=-0.2076)
+      Ammonia -> Air_Temp (w=-0.3928)
+      Air_Temp_Diff -> Air_Temp (w=0.1961)
+      Humidity -> Air_Temp (w=0.1139)
+      Veg_Disease -> Air_Temp (w=-1.1369)
+      Fish_Death -> Air_Temp (w=0.0202)
+      Light_Hours -> Humidity (w=-1.2802)
+      Water_Temp_Diff -> Humidity (w=-0.5181)
+      DO -> Humidity (w=-0.9892)
+      Ammonia -> Humidity (w=-5.0223)
+      Air_Temp_Diff -> Humidity (w=-0.9001)
+      Fish_Death -> Humidity (w=0.0840)
+
+🧠 [喀左] 构建专家因果图 (Physics-Guided)...
+
+🔎 [喀左] 估计因果效应: Light_Hours -> Veg_Disease
+   🎯 因果效应 (ATE): 0.0256
+      ⚠️ 无法获取 p-value: unsupported format string passed to numpy.ndarray.__format__
+   🛡️ 安慰剂检验 p-value: 1.0000 (应该是无关的)
+   🛡️ 子集验证: 新ATE=0.0257 (原=0.0256)
+
+🔎 [喀左] 估计因果效应: Water_Temp_Diff -> Fish_Death
+   🎯 因果效应 (ATE): -0.2583
+      ⚠️ 无法获取 p-value: unsupported format string passed to numpy.ndarray.__format__
+   🛡️ 安慰剂检验 p-value: 1.0000 (应该是无关的)
+   🛡️ 子集验证: 新ATE=-0.2613 (原=-0.2583)
+
+🔎 [喀左] 估计因果效应: DO -> Fish_Death
+   🎯 因果效应 (ATE): 0.1266
+      ⚠️ 无法获取 p-value: unsupported format string passed to numpy.ndarray.__format__
+   🛡️ 安慰剂检验 p-value: 1.0000 (应该是无关的)
+   🛡️ 子集验证: 新ATE=0.1268 (原=0.1266)
+
+🔎 [喀左] 估计因果效应: Ammonia -> Fish_Death
+   🎯 因果效应 (ATE): -3.5073
+      ⚠️ 无法获取 p-value: unsupported format string passed to numpy.ndarray.__format__
+   🛡️ 安慰剂检验 p-value: 1.0000 (应该是无关的)
+   🛡️ 子集验证: 新ATE=-3.4587 (原=-3.5073)
+
+🔎 [喀左] 估计因果效应: EC -> Veg_Disease
+   🎯 因果效应 (ATE): -0.0555
+      ⚠️ 无法获取 p-value: unsupported format string passed to numpy.ndarray.__format__
+   🛡️ 安慰剂检验 p-value: 1.0000 (应该是无关的)
+   🛡️ 子集验证: 新ATE=-0.0555 (原=-0.0555)
+
+🔎 [喀左] 估计因果效应: Humidity -> Veg_Disease
+   🎯 因果效应 (ATE): -0.0005
+      ⚠️ 无法获取 p-value: unsupported format string passed to numpy.ndarray.__format__
+   🛡️ 安慰剂检验 p-value: 1.0000 (应该是无关的)
+   🛡️ 子集验证: 新ATE=-0.0005 (原=-0.0005)
+Traceback (most recent call last):
+  File "/Users/liuziqian/science/农政齐民鱼菜共生/code/4.因果发现/causal_discovery.py", line 398, in <module>
+    main()
+  File "/Users/liuziqian/science/农政齐民鱼菜共生/code/4.因果发现/causal_discovery.py", line 384, in main
+    json.dump(results, f, ensure_ascii=False, indent=2)
+  File "/opt/miniconda3/envs/3.12/lib/python3.12/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "/opt/miniconda3/envs/3.12/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/opt/miniconda3/envs/3.12/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/opt/miniconda3/envs/3.12/lib/python3.12/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/opt/miniconda3/envs/3.12/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/opt/miniconda3/envs/3.12/lib/python3.12/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/opt/miniconda3/envs/3.12/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ndarray is not JSON serializable

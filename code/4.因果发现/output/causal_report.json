@@ -1,0 +1,114 @@
+{
+  "红光": [
+    {
+      "treatment": "Light_Hours",
+      "outcome": "Veg_Disease",
+      "ATE": -0.08571888519971615,
+      "p_value": 3.979543634564672e-31,
+      "placebo_p": 1.0,
+      "subset_ATE": -0.08567893049105756,
+      "is_robust": true
+    },
+    {
+      "treatment": "Water_Temp_Diff",
+      "outcome": "Fish_Death",
+      "ATE": 0.11683348129243898,
+      "p_value": 0.011184773211625908,
+      "placebo_p": 1.0,
+      "subset_ATE": 0.12178235232391778,
+      "is_robust": true
+    },
+    {
+      "treatment": "DO",
+      "outcome": "Fish_Death",
+      "ATE": 0.10304528180837114,
+      "p_value": 0.12251925081836569,
+      "placebo_p": 1.0,
+      "subset_ATE": 0.10518427433877496,
+      "is_robust": false
+    },
+    {
+      "treatment": "Ammonia",
+      "outcome": "Fish_Death",
+      "ATE": 0.33368939288376565,
+      "p_value": 1.7658363294436807e-09,
+      "placebo_p": 1.0,
+      "subset_ATE": 0.33328550805591867,
+      "is_robust": true
+    },
+    {
+      "treatment": "EC",
+      "outcome": "Veg_Disease",
+      "ATE": -0.18505124048702892,
+      "p_value": 0.6432154595050363,
+      "placebo_p": 1.0,
+      "subset_ATE": -0.18528541956136935,
+      "is_robust": false
+    },
+    {
+      "treatment": "Humidity",
+      "outcome": "Veg_Disease",
+      "ATE": 0.005308460367296208,
+      "p_value": 1.278499544887892e-87,
+      "placebo_p": 1.0,
+      "subset_ATE": 0.005285938571266305,
+      "is_robust": true
+    }
+  ],
+  "喀左": [
+    {
+      "treatment": "Light_Hours",
+      "outcome": "Veg_Disease",
+      "ATE": 0.025602308364876897,
+      "p_value": 3.361931379320979e-64,
+      "placebo_p": 1.0,
+      "subset_ATE": 0.02565627784278275,
+      "is_robust": true
+    },
+    {
+      "treatment": "Water_Temp_Diff",
+      "outcome": "Fish_Death",
+      "ATE": -0.25833310974025214,
+      "p_value": 0.0009248148272616634,
+      "placebo_p": 1.0,
+      "subset_ATE": -0.2613417261424986,
+      "is_robust": true
+    },
+    {
+      "treatment": "DO",
+      "outcome": "Fish_Death",
+      "ATE": 0.1265672503562153,
+      "p_value": 0.032708453689258656,
+      "placebo_p": 1.0,
+      "subset_ATE": 0.1268479175480439,
+      "is_robust": true
+    },
+    {
+      "treatment": "Ammonia",
+      "outcome": "Fish_Death",
+      "ATE": -3.507344784862722,
+      "p_value": 0.0003947568570172422,
+      "placebo_p": 1.0,
+      "subset_ATE": -3.458748364347683,
+      "is_robust": true
+    },
+    {
+      "treatment": "EC",
+      "outcome": "Veg_Disease",
+      "ATE": -0.055542791749223774,
+      "p_value": 3.7376179852949303e-34,
+      "placebo_p": 1.0,
+      "subset_ATE": -0.055544165595140776,
+      "is_robust": true
+    },
+    {
+      "treatment": "Humidity",
+      "outcome": "Veg_Disease",
+      "ATE": -0.000499651691737768,
+      "p_value": 1.15855639003608e-10,
+      "placebo_p": 1.0,
+      "subset_ATE": -0.0005094248377755023,
+      "is_robust": true
+    }
+  ]
+}
